@@ -1,18 +1,14 @@
+import User.*;
+
 public class Main {
     public static void main(String[] args) {
-        Identification idClient = new Identification(12314, "Jhon", "Smith");
-        Contact contactClient = new Contact(31925257, "jsmith@java.org", "Street Javascript 88 Python B Sur", "Java");
-        Client client = new Client(idClient, contactClient);
+        typeUser userClient = new typeUser(1,"Brian","Villegas","30566789","java@mail.com","Av. Java 74", "Bogojava");
+        Client client = new Client(userClient);
         System.out.println(client);
 
-        InfoEmployed infoEmployed = new InfoEmployed("28/05/2007", "O+");
-
-        Identification idEmployed = new Identification(4572,"Brian", "Steven");
-        Contact contactEmployed = new Contact(312344,"brian@java.org@","Avenue Java 8 SE 11", "Spain Java");
-        Employed employed = new Employed(idEmployed, contactEmployed, infoEmployed);
+        typeUser userEmployed = new typeUser(111,"Steven","Galletas","3192625557","reactjs@react.org","Buckingjava Palace", "Java palace");
+        Employed employed = new Employed(userEmployed,"2008/05/16","O+","Coordinator");
         System.out.println(employed);
-
-        Courier courier = new Courier(idEmployed, contactEmployed, infoEmployed);
 
         Package onePackage = new Package(234,"Medium", 4, 30000);
         System.out.println(onePackage);

@@ -1,3 +1,5 @@
+import User.Client;
+
 public class Shipment {
     private String id;
     private Client client;
